@@ -31,5 +31,5 @@ conda env create --file environment.yml
 3. Activer l'environnement conda
 
 ```
-conda activate trophic
+conda activate ssn
 ```
