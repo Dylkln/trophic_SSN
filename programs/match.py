@@ -44,7 +44,7 @@ def arguments():
         help = "a file containing paths to all transdecoder files")
     parser.add_argument("-o", "--output", dest = "output",
         type = str, required = True,
-        help = "a file containing paths to all transdecoder files")
+        help = "the output file")
 
     return parser.parse_args()
 
@@ -61,7 +61,8 @@ def main():
     f_out = gzip.open(args.output, "w")
 
     # determine the header for the output file
-    header = "queryId:frame\tqueryLength\tqueryFrom\tqueryTo\ttargetId:frame\ttargetLength\ttargetFrom\ttargetTo\tmatchLength\tpercentIdentity\tpercentPositivity\tscore\teValue\tbitscore\n"
+    header = "queryId:frame\tqueryLength\tqueryFrom\tqueryTo\ttargetId:frame\ttargetLength\t
+targetFrom\ttargetTo\tmatchLength\tpercentIdentity\tpercentPositivity\tscore\teValue\tbitscore\n"
 
     # write headers in binary
     f_out.write(header.encode())
