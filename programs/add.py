@@ -42,7 +42,7 @@ def arguments():
         help = "the output file with repeating nodes removed")
     parser.add_argument("-a", "--attribute_files", dest = "attribute_files",
         type = str, required = False, default = None,
-        help = "the filtration wanted of a diamond output")
+        help = "all files containing the attributes")
 
 
     return parser.parse_args()
