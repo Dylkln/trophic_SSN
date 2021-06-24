@@ -66,7 +66,7 @@ def determine_fieldnames(files, fieldnames):
         
 
         with open(files, "r", newline = "") as f_in:
-            dialect = csv.Sniffer().sniff(f_in.read(2048), delimiters = ",\t")
+            dialect = csv.Sniffer().sniff(f_in.readline(), delimiters = ",\t")
             f_in.seek(0)
             reader = csv.reader(f_in, dialect)
             headers = next(reader)
